@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="refresh" content="300">
+
+    <title>Sala de Controle</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+
+    <div class="nav-scroller bg-white shadow-sm">
+        <nav class="nav nav-underline">
+                <a class="nav-link active" href="https://operacoesrio.com.br">reiniciando em: &rarr; &nbsp<small  id="timer"></small></a>
+                <a class="nav-link active" href="https://operacoesrio.com.br/painel"><small>Acessar Painel Fixo</small></a>
+          
+          
+        </nav>
+      </div>
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Divider -->
+            <br>
+            <hr class="sidebar-divider my-0">
+            <!-- Main Content -->
+            <div id="content">
+
+
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+
+
+
+
+                    <script>
+                        function startTimer(duration, display) {
+                            var timer = duration, minutes, seconds;
+                            setInterval(function () {
+                                minutes = parseInt(timer / 60, 10);
+                                seconds = parseInt(timer % 60, 10);
+                                minutes = minutes < 10 ? "0" + minutes : minutes;
+                                seconds = seconds < 10 ? "0" + seconds : seconds;
+                                display.textContent = minutes + ":" + seconds;
+                                if (--timer < 0) {
+                                    timer = duration;
+                                }
+                            }, 1000);
+                        }
+                        window.onload = function () {
+                            var duration = 60 * 5; // Converter para segundos
+                            display = document.querySelector('#timer'); // selecionando o timer
+                            startTimer(duration, display); // iniciando o timer
+                        };
+                    </script>
+
+                    <div class="table-responsive align-items-center">
+
+                        <iframe width="1280" height="720"
+                            src="https://app.powerbi.com/view?r=eyJrIjoiYmUxOWJhYzYtMWFkYy00OWQ0LWI2MDgtMTJjMTE4NWI3NDNiIiwidCI6IjhkYzFiNzM0LTEyYTYtNDNmZC1iMjdkLWE3Yzg0ZmQ0MzdkMiJ9"
+                            frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+      
+
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
+
